@@ -1,0 +1,390 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNkF1y0pLn7KgIVSD7kux7f",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/reelelsadig/beginning-bioinformatics/blob/main/notebooks/Bioinformatics_Module03_pt_2_ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eWEfrGmPBJEN",
+        "outputId": "4af43277-7661-400c-b400-33d705130eaf"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "-1\n",
+            "10\n"
+          ]
+        }
+      ],
+      "source": [
+        "def add_or_subtract(x, y):\n",
+        "    if x == y:\n",
+        "        return x + y\n",
+        "    else:\n",
+        "        return x - y\n",
+        "\n",
+        "print(add_or_subtract(2, 3))\n",
+        "print(add_or_subtract(5, 5))\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#initate a counter\n",
+        "a = 1\n",
+        "while a <= 3:\n",
+        "  print (\"counting!\" * a)\n",
+        "  a += 1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0w03kL_VCTcI",
+        "outputId": "dd3e3702-af79-41e7-a9c2-6a1bf00ca545"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "counting!\n",
+            "counting!counting!\n",
+            "counting!counting!counting!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "names = [\"reel\", \"reen\", \"reem\"]\n",
+        "print (\"Hello\", names)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LaO06HWoC36O",
+        "outputId": "dd1b2316-cc80-4584-a04e-a69a0bcac556"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello ['reel', 'reen', 'reem']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Create a variable to define the number of iterations\n",
+        "iterations = 10\n",
+        "#print the current item's value each time through the loop\n",
+        "for number in range(iterations):\n",
+        "  print (number)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GsmkDqd7D236",
+        "outputId": "d45aa4ea-d455-4489-82c8-6d8dfcffcead"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from re import I\n",
+        "a, b =map(int, input().split())\n",
+        "total = 0\n",
+        "for i in range(a, b + 1):\n",
+        "  if i % 2 == 1:\n",
+        "    total += i\n",
+        "\n",
+        "  print(total)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TwF18kYoEfPp",
+        "outputId": "37b45097-63bf-4362-c0ba-57ddc1d7ddb5"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "200 400\n",
+            "0\n",
+            "201\n",
+            "201\n",
+            "404\n",
+            "404\n",
+            "609\n",
+            "609\n",
+            "816\n",
+            "816\n",
+            "1025\n",
+            "1025\n",
+            "1236\n",
+            "1236\n",
+            "1449\n",
+            "1449\n",
+            "1664\n",
+            "1664\n",
+            "1881\n",
+            "1881\n",
+            "2100\n",
+            "2100\n",
+            "2321\n",
+            "2321\n",
+            "2544\n",
+            "2544\n",
+            "2769\n",
+            "2769\n",
+            "2996\n",
+            "2996\n",
+            "3225\n",
+            "3225\n",
+            "3456\n",
+            "3456\n",
+            "3689\n",
+            "3689\n",
+            "3924\n",
+            "3924\n",
+            "4161\n",
+            "4161\n",
+            "4400\n",
+            "4400\n",
+            "4641\n",
+            "4641\n",
+            "4884\n",
+            "4884\n",
+            "5129\n",
+            "5129\n",
+            "5376\n",
+            "5376\n",
+            "5625\n",
+            "5625\n",
+            "5876\n",
+            "5876\n",
+            "6129\n",
+            "6129\n",
+            "6384\n",
+            "6384\n",
+            "6641\n",
+            "6641\n",
+            "6900\n",
+            "6900\n",
+            "7161\n",
+            "7161\n",
+            "7424\n",
+            "7424\n",
+            "7689\n",
+            "7689\n",
+            "7956\n",
+            "7956\n",
+            "8225\n",
+            "8225\n",
+            "8496\n",
+            "8496\n",
+            "8769\n",
+            "8769\n",
+            "9044\n",
+            "9044\n",
+            "9321\n",
+            "9321\n",
+            "9600\n",
+            "9600\n",
+            "9881\n",
+            "9881\n",
+            "10164\n",
+            "10164\n",
+            "10449\n",
+            "10449\n",
+            "10736\n",
+            "10736\n",
+            "11025\n",
+            "11025\n",
+            "11316\n",
+            "11316\n",
+            "11609\n",
+            "11609\n",
+            "11904\n",
+            "11904\n",
+            "12201\n",
+            "12201\n",
+            "12500\n",
+            "12500\n",
+            "12801\n",
+            "12801\n",
+            "13104\n",
+            "13104\n",
+            "13409\n",
+            "13409\n",
+            "13716\n",
+            "13716\n",
+            "14025\n",
+            "14025\n",
+            "14336\n",
+            "14336\n",
+            "14649\n",
+            "14649\n",
+            "14964\n",
+            "14964\n",
+            "15281\n",
+            "15281\n",
+            "15600\n",
+            "15600\n",
+            "15921\n",
+            "15921\n",
+            "16244\n",
+            "16244\n",
+            "16569\n",
+            "16569\n",
+            "16896\n",
+            "16896\n",
+            "17225\n",
+            "17225\n",
+            "17556\n",
+            "17556\n",
+            "17889\n",
+            "17889\n",
+            "18224\n",
+            "18224\n",
+            "18561\n",
+            "18561\n",
+            "18900\n",
+            "18900\n",
+            "19241\n",
+            "19241\n",
+            "19584\n",
+            "19584\n",
+            "19929\n",
+            "19929\n",
+            "20276\n",
+            "20276\n",
+            "20625\n",
+            "20625\n",
+            "20976\n",
+            "20976\n",
+            "21329\n",
+            "21329\n",
+            "21684\n",
+            "21684\n",
+            "22041\n",
+            "22041\n",
+            "22400\n",
+            "22400\n",
+            "22761\n",
+            "22761\n",
+            "23124\n",
+            "23124\n",
+            "23489\n",
+            "23489\n",
+            "23856\n",
+            "23856\n",
+            "24225\n",
+            "24225\n",
+            "24596\n",
+            "24596\n",
+            "24969\n",
+            "24969\n",
+            "25344\n",
+            "25344\n",
+            "25721\n",
+            "25721\n",
+            "26100\n",
+            "26100\n",
+            "26481\n",
+            "26481\n",
+            "26864\n",
+            "26864\n",
+            "27249\n",
+            "27249\n",
+            "27636\n",
+            "27636\n",
+            "28025\n",
+            "28025\n",
+            "28416\n",
+            "28416\n",
+            "28809\n",
+            "28809\n",
+            "29204\n",
+            "29204\n",
+            "29601\n",
+            "29601\n",
+            "30000\n",
+            "30000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "1zayN43tDxN2"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
